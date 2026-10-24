@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6F4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="22dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Publicar DDS"
+                android:textColor="#123D20"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diálogo Diário de Segurança"
+                android:textColor="#607067"
+                android:textSize="15sp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:letterSpacing="0.08"
+                android:text="INFORMAÇÕES DO DDS"
+                android:textColor="#2E7D32"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Título"
+                android:textColor="#26332B"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_titulo_dds"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#2E7D32"
+                android:hint="Digite o título do DDS"
+                android:inputType="textCapSentences"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Data de publicação"
+                android:textColor="#26332B"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_data_dds"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#2E7D32"
+                android:hint="DD/MM/AAAA"
+                android:inputType="date"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:letterSpacing="0.08"
+                android:text="CONTEÚDO"
+                android:textColor="#2E7D32"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Mensagem de segurança"
+                android:textColor="#26332B"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_conteudo_dds"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#2E7D32"
+                android:gravity="top"
+                android:hint="Escreva aqui o conteúdo do DDS..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="12dp"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:padding="18dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MATERIAIS E ANEXOS"
+                android:textColor="#2E7D32"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adicione fotos, vídeos ou arquivos para complementar este DDS."
+                android:textColor="#718078"
+                android:textSize="13sp"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btn_adicionar_foto"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Adicionar"
+                android:textColor="#2E7D32"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:backgroundTint="#E8F2EA"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_publicar_dds"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#1B5E20"
+            android:elevation="4dp"
+            android:text="PUBLICAR DDS"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+

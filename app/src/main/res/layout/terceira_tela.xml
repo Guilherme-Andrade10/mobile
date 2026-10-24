@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="SEGURANÇA"
+            android:textColor="#145A32"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Escolha seu perfil"
+            android:textColor="#17221B"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Selecione o tipo de acesso que corresponde à sua função."
+            android:textColor="#66736B"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/card_colaborador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#E8F5E9"
+                android:gravity="center"
+                android:text="👷"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Colaborador"
+                    android:textColor="#17221B"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Acesso às funções destinadas aos colaboradores."
+                    android:textColor="#66736B"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_tecnico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#FFF3CD"
+                android:gravity="center"
+                android:text="🦺"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Técnico de Segurança"
+                    android:textColor="#17221B"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Acesso às ferramentas de gestão e segurança."
+                    android:textColor="#66736B"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_continuar"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#145A32"
+            android:text="CONTINUAR"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Selecione uma opção para continuar"
+            android:textColor="#8A958E"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</ScrollView>
