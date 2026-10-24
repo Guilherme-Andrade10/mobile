@@ -1,44 +1,53 @@
 package com.example.protege_dds
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.protege_dds.databinding.FragmentSecondBinding
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
 class SecondFragment : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
-        return binding.root
-
+        return inflater.inflate(
+            R.layout.segunda_tela,
+            container,
+            false
+        )
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
-        }
-    }
+        val usuario = view.findViewById<EditText>(R.id.editUsuario)
+        val senha = view.findViewById<EditText>(R.id.editSenha)
+        val btnEntrar = view.findViewById<Button>(R.id.btnEntrar)
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        btnEntrar.setOnClickListener {
+            val nomeUsuario = usuario.text.toString().trim()
+            val senhaDigitada = senha.text.toString()
+
+            if (nomeUsuario.isEmpty() || senhaDigitada.isEmpty()) {
+                Toast.makeText(
+                    requireContext(),
+                    "Preencha o usuário e a senha.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    "Campos preenchidos! O login ainda será configurado.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
     }
 }
