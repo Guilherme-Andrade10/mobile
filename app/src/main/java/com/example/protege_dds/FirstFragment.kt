@@ -1,44 +1,53 @@
+
 package com.example.protege_dds
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.protege_dds.databinding.FragmentFirstBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- **/
 class FirstFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private val handler = Handler(Looper.getMainLooper())
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private val abrirLogin = Runnable {
+        if (isAdded) {
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+    }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
-        return binding.root
-
+        return inflater.inflate(R.layout.primeira_tela, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
+        val imgLogo = view.findViewById<View>(R.id.imgLogo)
+        val txtNomeApp = view.findViewById<View>(R.id.txtNomeApp)
+        val txtFrase = view.findViewById<View>(R.id.txtFrase)
+
+        imgLogo.alpha = 0f
+        txtNomeApp.alpha = 0f
+        txtFrase.alpha = 0f
+
+        imgLogo.animate().alpha(1f).setDuration(1000).start()
+        txtNomeApp.animate().alpha(1f).setDuration(1000).start()
+        txtFrase.animate().alpha(1f).setDuration(1000).start()
+
+        handler.postDelayed(abrirLogin, 3000)
     }
 
     override fun onDestroyView() {
+        handler.removeCallbacks(abrirLogin)
         super.onDestroyView()
-        _binding = null
     }
 }
